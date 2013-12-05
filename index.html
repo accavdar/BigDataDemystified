@@ -31,58 +31,324 @@
 </head>
 <body>
 <div class="reveal">
-    <div class="slides">
-        <section>
-            <h1>Big Data</h1>
-            <h1>Demystified</h1>
+<div class="slides">
+<section>
+    <h1>Big Data</h1>
 
-            <p>
-                <a href="http://cavdar.net" target="_blank">Abdullah Cetin CAVDAR</a> / <a
-                    href="http://twitter.com/accavdar" target="_blank">@accavdar</a>
-            </p>
-        </section>
+    <h1>Demystified</h1>
 
-        <section>
-            <section>
-                <h1>Concepts</h1>
-            </section>
-        </section>
+    <h3>December, 2013</h3>
 
-        <section>
-            <section>
-                <h1>Tools</h1>
-            </section>
-        </section>
+    <p>
+        <a href="http://cavdar.net" target="_blank">Abdullah Cetin CAVDAR</a> / <a
+            href="http://twitter.com/accavdar" target="_blank">@accavdar</a>
+    </p>
+</section>
 
-        <section>
-            <section>
-                <h1>Challenges</h1>
-            </section>
-        </section>
+<section>
+    <section>
+        <h1>Concepts</h1>
+    </section>
 
-        <section>
-            <h1>Questions?</h1>
-        </section>
+    <section>
+        <h2>What's Big Data</h2>
+        <blockquote>
+            <span class="focus">Big data</span> is data that exceeds the processing capacity of conventional
+            database systems.
+        </blockquote>
+    </section>
 
-        <section>
-            <section>
-                <h1>Slides</h1>
-                <a href="https://github.com/accavdar/BigDataDemystified"
-                   target="_blank">https://github.com/accavdar/BigDataDemystified</a>
-            </section>
-        </section>
+    <section>
+        <h2>Data Stream</h2>
+    </section>
 
-        <section>
-            <section data-transition="linear" data-background="#4d7e65"
-                     data-background-transition="slide">
-                <h1>THE END</h1>
+    <section>
+        <h2>Stream Mining Usages</h2>
+    </section>
 
-                <h3 class="inverted">by Abdullah Cetin CAVDAR / <a href="http://twitter.com/accavdar"
-                                                                   target="_blank">@accavdar</a>
-                </h3>
-            </section>
-        </section>
-    </div>
+    <section>
+        <h2>Generate Summaries</h2>
+
+        <p>Properly constructed summaries are useful for highlighting emerging patterns, trends, and anomalies.
+            Common summaries (frequency moments in stream mining parlance) include a list of distinct items,
+            recently trending items, heavy hitters (items that have appeared frequently), and the top k (most
+            popular) items. </p>
+    </section>
+
+    <section>
+        <h2>Approximate Answers</h2>
+
+        <p>In the streaming context summaries are constantly changing, thus in many2 applications approximate3
+            answers are acceptable. </p>
+    </section>
+
+    <section>
+        <h2>Sampling from a data stream</h2>
+
+        <p>Building a random sample from data that’s continuously arriving isn’t straightforward (note that in a
+            stream you “iterate” over the data set only once).</p>
+    </section>
+
+    <section>
+        <h2>Data Mining</h2>
+
+        <p>Beyond simple summaries, advanced algorithms for data mining have drawn interest.</p>
+    </section>
+
+    <section>
+        <p>important stream mining applications such as identifying trends (discover “trending topics”), anomaly
+            detection (“alerts”), correlations, clustering, and classification.</p>
+
+        <p>You have to be able to reliably consume it, normalize it, merge it with other data, apply functions
+            on it, store it, query it, distribute it, and oh yah, monetize it.</p>
+    </section>
+
+</section>
+
+<section>
+    <section>
+        <h1>NoSQL</h1>
+    </section>
+
+    <section>
+        <h2>NoSQL</h2>
+        <ul>
+            <li class="fragment roll-in"><span class="focus">N</span>ot <span class="focus">O</span>nly <span
+                    class="focus">SQL</span></li>
+            <li class="fragment roll-in">Usually do not require a fixed table schema nor do they use the concept
+                of joins
+            </li>
+            <li class="fragment roll-in">
+                Offers BASE instead of ACID (Atomicity, Consistency, Isolation, Durability)
+                <ul>
+                    <li><span class="focus">BA</span>siclly available</li>
+                    <li><span class="focus">S</span>oft state (scalable)</li>
+                    <li><span class="focus">E</span> Consistency</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>What's wrong with RDBMS?</h2>
+        <ul>
+            <li class="fragment roll-in">One size fits all? Not really</li>
+            <li class="fragment roll-in">Rigid schema design</li>
+            <li class="fragment roll-in">Harder to scale</li>
+            <li class="fragment roll-in">Replication</li>
+            <li class="fragment roll-in">Joins across multiple nodes? Hard</li>
+            <li class="fragment roll-in">How does RDBMS handle data growth? Hard</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Advantages</h2>
+        <ul>
+            <li class="fragment roll-in">Flexible schema</li>
+            <li class="fragment roll-in">Massive scalability</li>
+            <li class="fragment roll-in">
+                Eventual consistency
+                <ul>
+                    <li>higher performance</li>
+                    <li>availability</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Disadvantages</h2>
+        <ul>
+            <li class="fragment roll-in">No declarative query language
+                <ul>
+                    <li>Requires more programming</li>
+                </ul>
+            </li>
+            <li class="fragment roll-in">
+                Eventual consistency
+                <ul>
+                    <li>Fewer guarantees</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>NoSQL Systems</h2>
+        <ul>
+            <li class="fragment roll-in">Column Family</li>
+            <li class="fragment roll-in">Key-Value Stores</li>
+            <li class="fragment roll-in">Document Stores</li>
+            <li class="fragment roll-in">Graph Databases</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Column Family</h2>
+        <ul>
+            <li class="fragment roll-in">
+                Each storage block contains data from only one column
+            </li>
+            <li class="fragment roll-in">
+                More efficient than row (or document) store if:
+                <ul>
+                    <li>Multiple row/record/documents are inserted at the same time so updates of column blocks can be aggregated</li>
+                    <li>Retrievals access only some of the columns in a row/record/document</li>
+                </ul>
+            </li>
+            <li class="fragment roll-in"><span class="focus">HBase</span>, <span class="focus">Cassandra</span>, ...</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Key-Value Stores</h2>
+        <ul>
+            <li class="fragment roll-in">
+                Extremely simple Interface
+                <ul>
+                    <li class="fragment roll-in">Data model: <span class="focus">(key, value)</span> pairs</li>
+                </ul>
+            </li>
+            <li class="fragment roll-in">
+                Operations
+                <ul>
+                    <li>Insert(key, value)</li>
+                    <li>Fetch(key)</li>
+                    <li>Update(key)</li>
+                    <li>Delete(key)</li>
+                </ul>
+            </li>
+            <li class="fragment roll-in">
+                Implementation: <span class="focus">efficiency</span>, <span class="focus">scalability</span>, <span
+                    class="focus">fault-tolerance</span>
+                <ul>
+                    <li>Records distributed to nodes based on key</li>
+                    <li>Replication</li>
+                    <li>Single-record transactions, <span class="focus">eventual consistency</span></li>
+                </ul>
+            </li>
+            <li class="fragment roll-in"><span class="focus">Amazon Dynamo</span>, <span class="focus">Redis</span>,
+                <span class="focus">Riak</span>, ...
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Document Stores</h2>
+        <ul>
+            <li class="fragment roll-in">
+                Like Key-Value Stores except value is document
+                <ul>
+                    <li class="fragment roll-in">Data model: <span class="focus">(key, document)</span> pairs</li>
+                    <li class="fragment roll-in">Document: JSON, XML, other semi-structured formats</li>
+                </ul>
+            </li>
+            <li class="fragment roll-in">
+                Operations
+                <ul>
+                    <li>Insert(key, document)</li>
+                    <li>Fetch(key)</li>
+                    <li>Update(key)</li>
+                    <li>Delete(key)</li>
+                    <li>Also fetch based on document contents</li>
+                </ul>
+            </li>
+            <li class="fragment roll-in"><span class="focus">Apache CouchDB</span>, <span class="focus">MongoDB</span>,
+                <span class="focus">Elastic Search</span>, ...
+            </li>
+        </ul>
+
+    </section>
+
+    <section>
+        <h2>Graph Databases</h2>
+        <ul>
+            <li class="fragment roll-in">
+                <span class="focus">A graph</span> is a collection nodes (things) and edges (relationships) that connect
+                pairs of nodes
+            </li>
+
+            <li class="fragment roll-in">
+                Attach properties (key-value pairs) on nodes and relationships
+            </li>
+
+            <li class="fragment roll-in">
+                Relationships connect two nodes and both nodes and relationships can hold an arbitrary amount of
+                key-value pairs
+            </li>
+
+            <li class="fragment roll-in">
+                A graph database can be thought of as a key-value store, with full support for relationships
+            </li>
+
+            <li class="fragment roll-in"><span class="focus">Neo4j</span>, <span class="focus">FlockDB</span>,
+                <span class="focus">Pregel</span>, ...
+            </li>
+        </ul>
+    </section>
+</section>
+
+
+<section>
+    <section>
+        <h1>Tools</h1>
+    </section>
+
+    <section>
+        <h1>Batch</h1>
+    </section>
+
+    <section>
+        <h1>Stream</h1>
+    </section>
+
+    <section>
+        <h2>Storm</h2>
+    </section>
+
+    <section>
+        <h2>Spark Streaming</h2>
+    </section>
+
+    <section>
+        <h2>S4</h2>
+    </section>
+
+    <section>
+        <h2>Samza</h2>
+    </section>
+
+</section>
+
+<section>
+    <section>
+        <h1>Challenges</h1>
+    </section>
+</section>
+
+<section>
+    <h1>Questions?</h1>
+</section>
+
+<section>
+    <section>
+        <h1>Slides</h1>
+        <a href="https://github.com/accavdar/BigDataDemystified"
+           target="_blank">https://github.com/accavdar/BigDataDemystified</a>
+    </section>
+</section>
+
+<section>
+    <section data-transition="linear" data-background="#4d7e65"
+             data-background-transition="slide">
+        <h1>THE END</h1>
+
+        <h3 class="inverted">by Abdullah Cetin CAVDAR / <a href="http://twitter.com/accavdar"
+                                                           target="_blank">@accavdar</a>
+        </h3>
+    </section>
+</section>
+</div>
 </div>
 
 <script src="reveal/lib/js/head.min.js"></script>
