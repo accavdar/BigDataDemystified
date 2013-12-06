@@ -59,48 +59,106 @@
     </section>
 
     <section>
-        <h2>Data Stream</h2>
+        <h2>4V's of Big Data</h2>
+        <ul>
+            <li class="fragment roll-in"><span class="focus">Volume</span> data is getting higher/bigger than ever</li>
+            <li class="fragment roll-in"><span class="focus">Velocity</span> data is increasing. ex: complex real time
+                data
+            </li>
+            <li class="fragment roll-in"><span class="focus">Variety</span> data is spiraling ex: unstructured video and
+                voice
+            </li>
+            <li class="fragment roll-in"><span class="focus">Variability</span> data types/formats also different</li>
+        </ul>
     </section>
 
     <section>
-        <h2>Stream Mining Usages</h2>
+        <h2>Multitude of Data Types</h2>
+        <ul>
+            <li class="fragment roll-in">
+                <span class="focus">Structured</span>, <span class="focus">Semi-structured</span> and <span class="focus">Unstructured</span>
+                <ul>
+                    <li>Demographic, psychographic, transactional</li>
+                    <li>Call center data, social media data, web log data, sensor networks</li>
+                    <li>Requires new storage mechanisms (Hadoop, NoSQL, ...)</li>
+                    <li>High dimensionality</li>
+                </ul>
+            </li>
+        </ul>
     </section>
 
     <section>
-        <h2>Generate Summaries</h2>
-
-        <p>Properly constructed summaries are useful for highlighting emerging patterns, trends, and anomalies.
-            Common summaries (frequency moments in stream mining parlance) include a list of distinct items,
-            recently trending items, heavy hitters (items that have appeared frequently), and the top k (most
-            popular) items. </p>
+        <h2>Different Sectors</h2>
+        <img src="img/data_by_sector.png"/>
     </section>
 
     <section>
-        <h2>Approximate Answers</h2>
+        <h2>Challenge</h2>
 
-        <p>In the streaming context summaries are constantly changing, thus in many2 applications approximate3
-            answers are acceptable. </p>
+        <p>The challenge in big data analytics is to <span
+                class="focus">dig deeply, quickly (real time?) and widely</span></p>
     </section>
 
     <section>
-        <h2>Sampling from a data stream</h2>
+        <h1>Real Challenge: Stream Mining?</h1>
+    </section>
+
+    <section>
+        <h1>Stream Mining Usages</h1>
+    </section>
+
+    <section>
+        <h2><span class="focus">Generate Summaries</span></h2>
+
+        <p>Properly constructed summaries are useful for highlighting <span class="focus">emerging patterns, trends, and anomalies</span>.
+            Common summaries include a list of distinct items, recently trending items, heavy hitters (items that have
+            appeared frequently), and the top k (most
+            popular) items</p>
+    </section>
+
+    <section>
+        <h2><span class="focus">Approximate Answers</span></h2>
+
+        <p>In the streaming context summaries are constantly changing, thus in many applications approximate
+            answers are acceptable</p>
+    </section>
+
+    <section>
+        <h2><span class="focus">Sampling from a Data Stream</span></h2>
 
         <p>Building a random sample from data that’s continuously arriving isn’t straightforward (note that in a
-            stream you “iterate” over the data set only once).</p>
+            stream you <span class="focus">iterate</span> over the data set only once)</p>
     </section>
 
     <section>
-        <h2>Data Mining</h2>
+        <h2><span class="focus">Data Mining</span></h2>
 
-        <p>Beyond simple summaries, advanced algorithms for data mining have drawn interest.</p>
+        <p>Beyond simple summaries, advanced algorithms for data mining have drawn interest</p>
     </section>
 
     <section>
-        <p>important stream mining applications such as identifying trends (discover “trending topics”), anomaly
-            detection (“alerts”), correlations, clustering, and classification.</p>
+        <h2>Application Areas</h2>
 
-        <p>You have to be able to reliably consume it, normalize it, merge it with other data, apply functions
-            on it, store it, query it, distribute it, and oh yah, monetize it.</p>
+        <p>Important stream mining applications such as</p>
+        <ul>
+            <li class="fragment roll-in"><span class="focus">identifying trends (discover “trending topics”)</span></li>
+            <li class="fragment roll-in"><span class="focus">anomaly detection (“alerts”)</span></li>
+            <li class="fragment roll-in"><span class="focus">correlations</span></li>
+            <li class="fragment roll-in"><span class="focus">clustering</span></li>
+            <li class="fragment roll-in"><span class="focus">classification</span></li>
+        </ul>
+    </section>
+
+    <section>
+        <h1>Purpose</h1>
+
+        <p>You have to be able to reliably <span class="focus">consume it, normalize it, merge it with other data, apply functions
+            on it, store it, query it, distribute it</span></p>
+    </section>
+
+    <section>
+        <h2>Cyber Security?</h2>
+        <img src="img/cyber_security.png"/>
     </section>
 
 </section>
@@ -123,7 +181,7 @@
                 <ul>
                     <li><span class="focus">BA</span>siclly available</li>
                     <li><span class="focus">S</span>oft state (scalable)</li>
-                    <li><span class="focus">E</span> Consistency</li>
+                    <li><span class="focus">E</span>ventual Consistency</li>
                 </ul>
             </li>
         </ul>
@@ -192,11 +250,14 @@
             <li class="fragment roll-in">
                 More efficient than row (or document) store if:
                 <ul>
-                    <li>Multiple row/record/documents are inserted at the same time so updates of column blocks can be aggregated</li>
+                    <li>Multiple row/record/documents are inserted at the same time so updates of column blocks can be
+                        aggregated
+                    </li>
                     <li>Retrievals access only some of the columns in a row/record/document</li>
                 </ul>
             </li>
-            <li class="fragment roll-in"><span class="focus">HBase</span>, <span class="focus">Cassandra</span>, ...</li>
+            <li class="fragment roll-in"><span class="focus">HBase</span>, <span class="focus">Cassandra</span>, ...
+            </li>
         </ul>
     </section>
 
@@ -288,46 +349,348 @@
     </section>
 </section>
 
+<section>
+<section>
+    <h1>Batch Processing</h1>
+</section>
+
+<section>
+    <h2>Batch Processing</h2>
+    <ul>
+        <li class="fragment roll-in">
+            <span class="focus">Batch data processing</span> is an efficient way of processing high volumes of data
+            is where a group of
+            transactions is collected over a period of time
+        </li>
+        <li class="fragment roll-in">
+            Data is collected, entered, processed and then the batch results are produced
+        </li>
+        <li class="fragment roll-in">
+            Data is processed by <span class="focus">worker nodes</span> and managed by <span
+                class="focus">master node</span>
+        </li>
+        <li class="fragment roll-in">
+            Analytical queries can be executed as distributed on offline big data. User queries are converted to
+            Map-Reduce jobs on cluster to process big data
+            <ul>
+                <li><span class="focus">Hive</span>: Supports SQL like query language</li>
+                <li><span class="focus">Pig</span>: More likely a scripting language</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Map-Reduce</h2>
+    <ul>
+        <li class="fragment roll-in">
+            <span class="focus">MapReduce</span> is a programming model and software framework first developed by
+            Google
+        </li>
+        <li class="fragment roll-in">
+            A method for distributing a task across multiple nodes
+        </li>
+        <li class="fragment roll-in">
+            Each node processes data assigned to that node
+        </li>
+        <li class="fragment roll-in">
+            Consists of two developer-created phases
+            <ul>
+                <li><span class="focus">Map</span></li>
+                <li><span class="focus">Reduce</span></li>
+            </ul>
+        </li>
+        <li class="fragment roll-in">
+            Features of MapReduce systems include:
+            <ul>
+                <li>Reliably processing a job even when machines die</li>
+                <li>Paralellization on thousands of machines</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Map</h2>
+
+    <p><span class="focus">Map step</span>: The master node takes the input, divides it into smaller sub-problems,
+        and distributes them to
+        worker nodes. A worker node may do this again in turn, leading to a multi-level tree structure. The worker
+        node processes the smaller problem, and passes the answer back to its master node</p>
+<pre>
+<code class="java" contenteditable="false" data-trim>
+    function map(String name, String document) {
+    for each word w in document {
+    emit (w, 1) // emit(key, value)
+    }
+    }
+</code>
+</pre>
+</section>
+
+<section>
+    <h2>Reduce</h2>
+
+    <p><span class="focus">Reduce step</span>: After map step, the master node collects the answers of all the
+        sub-problems and classifies all values with their keys. Each unique key and its values are sent to a
+        distinct reducer. This means that each reducer processes a distinct key and its values independently from
+        each other</p>
+<pre>
+<code class="java" contenteditable="false" data-trim>
+    function reduce(String word, Iterator partialCounts) {
+    sum = 0;
+    for each pc in partialCounts {
+    sum += ParseInt(pc);
+    emit (word, sum);
+    }
+    }
+</code>
+</pre>
+</section>
+
+<section>
+    <h2>MapReduce Overview</h2>
+    <img src="img/mapreduce.png"/>
+</section>
+
+<section>
+    <h2>Hadoop</h2>
+    <ul>
+        <li class="fragment roll-in">
+            <span class="focus">Hadoop</span> is a scalable fault-tolerant distributed system for data storage and
+            processing
+        </li>
+        <li class="fragment roll-in">
+            Core Hadoop has two main components:
+            <ul>
+                <li><span class="focus">HDFS</span>: Hadoop Distributed File System is a reliable, self- healing,
+                    redundant, high-bandwidth, distributed file system optimized for large files
+                </li>
+                <li><span class="focus">MapReduce</span>: Fault-tolerant distributed processing</li>
+            </ul>
+        </li>
+        <li class="fragment roll-in">
+            Operates on unsuctured and structured data
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>HDFS</h2>
+    <ul>
+        <li class="fragment roll-in">
+            Scalable, distributed, portable file system written in Java for Hadoop framework
+            <ul>
+                <li>Primary distributed storage used by Hadoop applications</li>
+            </ul>
+        </li>
+        <li class="fragment roll-in">
+            HDFS can be part of a Hadoop cluster or can be a stand-alone general purpose distributed file system
+        </li>
+        <li class="fragment roll-in">
+            An HDFS cluster primarily consists of
+            <ul>
+                <li><span class="focus">NameNode</span> that manages file system metadata</li>
+                <li><span class="focus">DataNode</span> that stores actual data</li>
+            </ul>
+        </li>
+        <li class="fragment roll-in">
+            Stores very large files in blocks across machines in a large cluster
+            <ul>
+                <li>Reliability and fault tolerance ensured by replicating data across multiple hosts</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Analytical Queries over Offline Big Data</h2>
+    <ul>
+        <li class="fragment roll-in">
+            Hadoop is great for large-data processing
+            <ul>
+                <li>But writing Java programs for everything is verbose and slow</li>
+                <li>Not everyone wants to (or can) write Java code</li>
+            </ul>
+        </li>
+        <li class="fragment roll-in">
+            Solution: develop higher-level data processing languages
+            <ul>
+                <li><span class="focus">Hive</span> HQL is like SQL</li>
+                <li><span class="focus">Pig</span> Pig Latin is a bit like Perl</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Hive</h2>
+    <ul>
+        <li class="fragment roll-in">
+            A system for querying and managing structured data built on top of Hadoop
+        </li>
+        <li class="fragment roll-in">
+            Structured data with rich data types (structs, lists and maps)
+        </li>
+        <li class="fragment roll-in">
+            Directly query data from different formats (text/binary) and file formats (Flat/Sequence)
+        </li>
+        <li class="fragment roll-in">
+            SQL as a familiar programming tool and for standard analytics
+        </li>
+        <li class="fragment roll-in">
+            Allow embedded scripts for extensibility and for non standard applications
+        </li>
+        <li class="fragment roll-in">
+            Rich MetaData to allow data discovery and for optimization
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Pig</h2>
+    <ul>
+        <li class="fragment roll-in">
+            A platform for analyzing large data sets that consists of a high-level language for expressing data analysis
+            programs
+        </li>
+        <li class="fragment roll-in">
+            Compiles down to MapReduce jobs
+        </li>
+        <li class="fragment roll-in">
+            Common design patterns as key words (joins, distinct, counts)
+        </li>
+        <li class="fragment roll-in">
+            Data flow analysis
+            <ul>
+                <li>A script can map to multiple map-reduce jobs</li>
+            </ul>
+        </li>
+        <li class="fragment roll-in">
+            Can be interactive mode
+            <ul>
+                <li>Issue commands and get results</li>
+            </ul>
+
+        </li>
+    </ul>
+</section>
+
+</section>
 
 <section>
     <section>
-        <h1>Tools</h1>
+        <h1>Real Time Data Processing</h1>
     </section>
 
     <section>
-        <h1>Batch</h1>
-    </section>
-
-    <section>
-        <h1>Stream</h1>
+        <h2>Real Time Data Processing</h2>
+        <ul>
+            <li class="fragment roll-in">
+                In contrast, real time data processing involves a continual input, process and output of data
+            </li>
+            <li class="fragment roll-in">
+                Size of data is not certain at the beginning of the processing
+            </li>
+            <li class="fragment roll-in">
+                Data must be processed in a small time period (or near real time)
+            </li>
+            <li class="fragment roll-in">
+                <span class="focus">Storm</span> is a most popular open source implementation of realtime data
+                processing
+            </li>
+        </ul>
     </section>
 
     <section>
         <h2>Storm</h2>
+        <ul>
+            <li class="fragment roll-in">
+                Storm is a highly distributed real time computation system
+            </li>
+            <li class="fragment roll-in">
+                It's scalable and fault-tolerant
+            </li>
+            <li class="fragment roll-in">
+                Can be used with any programming language
+            </li>
+        </ul>
     </section>
 
     <section>
-        <h2>Spark Streaming</h2>
+        <h2>Architecture</h2>
+        <img src="img/storm_architecture.png"/>
     </section>
 
     <section>
-        <h2>S4</h2>
+        <h2>Architecture Components</h2>
+        <ul>
+            <li class="fragment roll-in">
+                <span class="focus">Nimbus</span>
+                <ul>
+                    <li>Master node (similar to Hadoop JobTracker)</li>
+                    <li>Responsible for distributing code around the cluster, assigning tasks to machines, and
+                        monitoring for failures
+                    </li>
+                </ul>
+            </li>
+            <li class="fragment roll-in">
+                <span class="focus">Zookeeper</span>
+                <ul>
+                    <li>Used for cluster coordination between Nimbus and Supervisors</li>
+                    <li>Nimbus and Supervisors are fail-fast and stateless; all state is kept in Zookeeper or on local
+                        disk
+                    </li>
+                </ul>
+            </li>
+            <li class="fragment roll-in">
+                <span class="focus">Supervisor</span>
+                <ul>
+                    <li>Run worker processes</li>
+                    <li>The supervisor listens for work assigned to its machine and starts and stops worker processes as
+                        necessary based on what Nimbus has assigned to it
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
     </section>
 
     <section>
-        <h2>Samza</h2>
+        <h2>Storm Topology</h2>
+        <img src="img/topology.png"/>
     </section>
 
-</section>
-
-<section>
     <section>
-        <h1>Challenges</h1>
+        <h2>Main Concepts</h2>
+        <ul>
+            <li class="fragment roll-in">
+                <span class="focus">Streams</span>
+                <ul>
+                    <li>Unbounded sequence of tuples/datas (input or output)</li>
+                </ul>
+            </li>
+            <li class="fragment roll-in">
+                <span class="focus">Spouts</span>
+                <ul>
+                    <li>Source of streams</li>
+                    <li>Such as reading data from Twitter Streaming API</li>
+                </ul>
+            </li>
+            <li class="fragment roll-in">
+                <span class="focus">Bolts</span>
+                <ul>
+                    <li>Processes input streams, does some processing and possibly emits new streams</li>
+                </ul>
+            </li>
+            <li class="fragment roll-in">
+                <span class="focus">Topologies</span>
+                <ul>
+                    <li>Network of spouts and bolts</li>
+                </ul>
+            </li>
+        </ul>
     </section>
-</section>
-
-<section>
-    <h1>Questions?</h1>
 </section>
 
 <section>
